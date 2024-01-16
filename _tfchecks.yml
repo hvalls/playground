@@ -17,6 +17,9 @@ checks:
       - name: tags
         action: contains
         value: team
+     -  name: tags
+        action: contains
+        value: maintainer
   errorMessage: The required tags were missing
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
