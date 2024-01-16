@@ -1,0 +1,22 @@
+---
+checks:
+- code: CUS001
+  description: Custom check to ensure the tags are applied to EC2 instances
+  resolution: Add required tags
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - aws_instance
+  severity: ERROR
+  matchSpec:
+    action: and
+    predicateMatchSpec:
+      - name: tags
+        action: contains
+        value: brand
+      - name: tags
+        action: contains
+        value: team
+  errorMessage: The required tags were missing
+  relatedLinks:
+  - http://internal.acmecorp.com/standards/aws/tagging.html
