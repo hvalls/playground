@@ -20,6 +20,9 @@ checks:
      -  name: tags
         action: contains
         value: maintainer
+     -  name: tags
+        action: contains
+        value: wallet
   errorMessage: The required tags were missing
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
