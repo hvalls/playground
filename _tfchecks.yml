@@ -17,10 +17,10 @@ checks:
       - name: tags
         action: contains
         value: team
-     -  name: tags
+      - name: tags
         action: contains
         value: maintainer
-     -  name: tags
+      - name: tags
         action: contains
         value: wallet
   errorMessage: The required tags were missing
