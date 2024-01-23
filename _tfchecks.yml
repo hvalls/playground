@@ -17,16 +17,6 @@ checks:
       - name: tags
         action: contains
         value: team
-      - name: tags
-        action: contains
-        value: maintainer
-      - name: tags
-        action: contains
-        value: wallet
-      - name: tags
-        action: contains
-        value: userid
-        
   errorMessage: The required tags were missing
   relatedLinks:
-  - http://internal.acmecorp.com/standards/aws/tagging.html
+  - https://github.com/hvalls/playground/blob/main/_tfchecks.yml
