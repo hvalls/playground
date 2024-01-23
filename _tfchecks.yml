@@ -23,6 +23,9 @@ checks:
       - name: tags
         action: contains
         value: wallet
+      - name: tags
+        action: contains
+        value: userid
   errorMessage: The required tags were missing
   relatedLinks:
   - http://internal.acmecorp.com/standards/aws/tagging.html
