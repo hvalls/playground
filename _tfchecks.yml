@@ -17,6 +17,45 @@ checks:
       - name: tags
         action: contains
         value: team
-  errorMessage: The required tags were missing
+      - name: tags
+        action: contains
+        value: project
+      - name: tags
+        action: contains
+        value: environment
+      - name: tags
+        action: contains
+        value: country
+      - name: tags
+        action: contains
+        value: maintainer
+      - name: tags
+        action: contains
+        value: cost-center
+      - name: tags
+        action: contains
+        value: data-classification
+      - name: tags
+        action: contains
+        value: impact
+      - name: tags
+        action: contains
+        value: sla
+      - name: tags
+        action: contains
+        value: map-migrated
+      - name: tags
+        action: contains
+        value: cost-center
+      - name: tags
+        action: contains
+        value: backup-policy
+      - name: tags
+        action: contains
+        value: maintenance-windows
+      - name: tags
+        action: contains
+        value: creation-date
+  errorMessage: One or more tags are missing
   relatedLinks:
   - https://github.com/hvalls/playground/blob/main/_tfchecks.yml
