@@ -1,12 +1,12 @@
 ---
 checks:
-- code: CUS001
-  description: Custom check to ensure the tags are applied to EC2 instances
+- code: IDEA001
+  description: Custom check to ensure the tags are applied to Security Groups
+  impact: It can cause trouble when identifying or classifyng infrastructure elements
   resolution: Add required tags
   requiredTypes:
   - resource
   requiredLabels:
-  - aws_instance
   - aws_security_group
   severity: ERROR
   matchSpec:
@@ -42,21 +42,6 @@ checks:
       - name: tags
         action: contains
         value: sla
-      - name: tags
-        action: contains
-        value: map-migrated
-      - name: tags
-        action: contains
-        value: cost-center
-      - name: tags
-        action: contains
-        value: backup-policy
-      - name: tags
-        action: contains
-        value: maintenance-windows
-      - name: tags
-        action: contains
-        value: creation-date
   errorMessage: One or more tags are missing
   relatedLinks:
   - https://github.com/hvalls/playground/blob/main/_tfchecks.yml
