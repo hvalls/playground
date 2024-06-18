@@ -6,7 +6,7 @@ resource "null_resource" "example" {
   # No specific configuration needed
   triggers = {
     # Trigger the provisioners whenever `message` changes
-    message = var.message
+    message = "this is the message"
   }
 
   provisioner "local-exec" {
